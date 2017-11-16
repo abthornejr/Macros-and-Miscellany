@@ -7,7 +7,7 @@ Sub CopyColumns_AccWB()
 Dim twb As Workbook
 Dim rs As Worksheet
 ' DO NOT REMOVE FOO
-Dim sa, sb, sc, sd, se, sf, sg, sh, si, sj, foo As Worksheet
+Dim sa, sb, sc, sd, se, sf, sg, sh, si, sj, sk, foo As Worksheet
 Dim elar, mar, mbr, alr, ger, tr, bior, ear, chr, phr, usr, glr, ccelar, ccalr, ccger, ccatr As String
 Dim c As Range
 
@@ -29,27 +29,28 @@ Set sg = twb.Sheets("2013 Cohort")
 Set sh = twb.Sheets("2014 Cohort")
 Set si = twb.Sheets("2015 Cohort")
 Set sj = twb.Sheets("2016 Cohort")
+Set sk = twb.Sheets("2017 Cohort")
 
 ' This shoudl say "Leonard" if sj initialized properly
 ' MsgBox (sj.Range("C7").Value())
 
 ' Identify ranges for each of the columns to copy
-elar = "AL3:AL180"
-mar = "AO3:AO180"
-mbr = "AR3:AR180"
-alr = "AU3:AU180"
-ger = "AX3:AX180"
-tr = "BA3:BA180"
-bior = "BD3:BD180"
-ear = "BG3:BG180"
-chr = "BJ3:BJ180"
-phr = "BM3:BM180"
-usr = "BP3:BP180"
-glr = "BS3:BS180"
-ccelar = "BV3:BV180"
-ccalr = "BY3:BY180"
-ccger = "CB3:CB180"
-ccatr = "CE3:CE180"
+elar = "AM3:AM180"
+mar = "AP3:AP180"
+mbr = "AS3:AS180"
+alr = "AV3:AV180"
+ger = "AY3:AY180"
+tr = "BB3:BB180"
+bior = "BE3:BE180"
+ear = "BH3:BH180"
+chr = "BK3:BK180"
+phr = "BN3:BN180"
+usr = "BQ3:BQ180"
+glr = "BT3:BT180"
+ccelar = "BW3:BW180"
+ccalr = "BZ3:BZ180"
+ccger = "CC3:CC180"
+ccatr = "CF3:CF180"
 
 Set c = rs.Range(elar)
 c.Copy (sa.Range(elar))
@@ -61,7 +62,9 @@ c.Copy (sf.Range(elar))
 c.Copy (sg.Range(elar))
 c.Copy (sh.Range(elar))
 c.Copy (si.Range(elar))
-c.Copy (twb.Sheets("2016 Cohort").Range(elar))
+c.Copy (sj.Range(elar))
+c.Copy (sk.Range(elar))
+Application.CutCopyMode = False
 
 Set c = rs.Range(mar)
 c.Copy (sa.Range(mar))
@@ -74,6 +77,8 @@ c.Copy (sg.Range(mar))
 c.Copy (sh.Range(mar))
 c.Copy (si.Range(mar))
 c.Copy (sj.Range(mar))
+c.Copy (sk.Range(mar))
+Application.CutCopyMode = False
 
 Set c = rs.Range(mbr)
 c.Copy (sa.Range(mbr))
@@ -86,6 +91,8 @@ c.Copy (sg.Range(mbr))
 c.Copy (sh.Range(mbr))
 c.Copy (si.Range(mbr))
 c.Copy (sj.Range(mbr))
+c.Copy (sk.Range(mbr))
+Application.CutCopyMode = False
 
 Set c = rs.Range(alr)
 c.Copy (sa.Range(alr))
@@ -98,6 +105,8 @@ c.Copy (sg.Range(alr))
 c.Copy (sh.Range(alr))
 c.Copy (si.Range(alr))
 c.Copy (sj.Range(alr))
+c.Copy (sk.Range(alr))
+Application.CutCopyMode = False
 
 Set c = rs.Range(ger)
 c.Copy (sa.Range(ger))
@@ -110,6 +119,8 @@ c.Copy (sg.Range(ger))
 c.Copy (sh.Range(ger))
 c.Copy (si.Range(ger))
 c.Copy (sj.Range(ger))
+c.Copy (sk.Range(ger))
+Application.CutCopyMode = False
 
 Set c = rs.Range(tr)
 c.Copy (sa.Range(tr))
@@ -122,6 +133,8 @@ c.Copy (sg.Range(tr))
 c.Copy (sh.Range(tr))
 c.Copy (si.Range(tr))
 c.Copy (sj.Range(tr))
+c.Copy (sk.Range(tr))
+Application.CutCopyMode = False
 
 Set c = rs.Range(bior)
 c.Copy (sa.Range(bior))
@@ -134,6 +147,8 @@ c.Copy (sg.Range(bior))
 c.Copy (sh.Range(bior))
 c.Copy (si.Range(bior))
 c.Copy (sj.Range(bior))
+c.Copy (sk.Range(bior))
+Application.CutCopyMode = False
 
 Set c = rs.Range(ear)
 c.Copy (sa.Range(ear))
@@ -146,6 +161,8 @@ c.Copy (sg.Range(ear))
 c.Copy (sh.Range(ear))
 c.Copy (si.Range(ear))
 c.Copy (sj.Range(ear))
+c.Copy (sk.Range(ear))
+Application.CutCopyMode = False
 
 Set c = rs.Range(chr)
 c.Copy (sa.Range(chr))
@@ -158,6 +175,8 @@ c.Copy (sg.Range(chr))
 c.Copy (sh.Range(chr))
 c.Copy (si.Range(chr))
 c.Copy (sj.Range(chr))
+c.Copy (sk.Range(chr))
+Application.CutCopyMode = False
 
 Set c = rs.Range(phr)
 c.Copy (sa.Range(phr))
@@ -170,6 +189,8 @@ c.Copy (sg.Range(phr))
 c.Copy (sh.Range(phr))
 c.Copy (si.Range(phr))
 c.Copy (sj.Range(phr))
+c.Copy (sk.Range(phr))
+Application.CutCopyMode = False
 
 Set c = rs.Range(usr)
 c.Copy (sa.Range(usr))
@@ -182,6 +203,8 @@ c.Copy (sg.Range(usr))
 c.Copy (sh.Range(usr))
 c.Copy (si.Range(usr))
 c.Copy (sj.Range(usr))
+c.Copy (sk.Range(usr))
+Application.CutCopyMode = False
 
 Set c = rs.Range(glr)
 c.Copy (sa.Range(glr))
@@ -194,6 +217,8 @@ c.Copy (sg.Range(glr))
 c.Copy (sh.Range(glr))
 c.Copy (si.Range(glr))
 c.Copy (sj.Range(glr))
+c.Copy (sk.Range(glr))
+Application.CutCopyMode = False
 
 Set c = rs.Range(ccelar)
 c.Copy (sa.Range(ccelar))
@@ -206,6 +231,8 @@ c.Copy (sg.Range(ccelar))
 c.Copy (sh.Range(ccelar))
 c.Copy (si.Range(ccelar))
 c.Copy (sj.Range(ccelar))
+c.Copy (sk.Range(ccelar))
+Application.CutCopyMode = False
 
 Set c = rs.Range(ccalr)
 c.Copy (sa.Range(ccalr))
@@ -218,6 +245,8 @@ c.Copy (sg.Range(ccalr))
 c.Copy (sh.Range(ccalr))
 c.Copy (si.Range(ccalr))
 c.Copy (sj.Range(ccalr))
+c.Copy (sk.Range(ccalr))
+Application.CutCopyMode = False
 
 Set c = rs.Range(ccger)
 c.Copy (sa.Range(ccger))
@@ -230,6 +259,8 @@ c.Copy (sg.Range(ccger))
 c.Copy (sh.Range(ccger))
 c.Copy (si.Range(ccger))
 c.Copy (sj.Range(ccger))
+c.Copy (sk.Range(ccger))
+Application.CutCopyMode = False
 
 Set c = rs.Range(ccatr)
 c.Copy (sa.Range(ccatr))
@@ -242,6 +273,8 @@ c.Copy (sg.Range(ccatr))
 c.Copy (sh.Range(ccatr))
 c.Copy (si.Range(ccatr))
 c.Copy (sj.Range(ccatr))
+c.Copy (sk.Range(ccatr))
+Application.CutCopyMode = False
 
 MsgBox ("Check the formulas. If this didn't work, just close and reopen the workbook. It was saved before any code ran.")
 
